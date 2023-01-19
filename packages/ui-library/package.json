@@ -1,0 +1,51 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "main": "./dist/index.cjs.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.ts*",
+    "build:dev": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "storybook": "start-storybook -p 6006",
+    "test": "jest --verbose",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-analyze": "webpack --config webpack.prod.js --profile --json > stats.json"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@storybook/react": "^6.5.12"
+  },
+  
+  "devDependencies": {
+    "@statoscope/webpack-plugin": "^5.24.0",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/preset-scss": "^1.0.3",
+    "css-loader": "^6.7.1",
+    "esbuild-loader": "^2.20.0",
+    "classnames": "^2.3.1",
+    "eslint-config-custom": "*",
+    "jest-config-custom": "*",
+    "sass-loader": "^13.1.0",
+    "style-loader": "^3.3.1",
+    "tsconfig": "*",
+    "typescript": "^4.5.2",
+    "gh-pages": "^4.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}

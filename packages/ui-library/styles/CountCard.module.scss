@@ -1,0 +1,40 @@
+@import "./global.scss";
+
+.countCard {
+    .dataDisplay {
+        flex-direction: row;
+        margin: auto;
+        @include display(flex, unset, center);
+        text-align: center;
+    }
+    
+    .dataDisplayInner {
+        margin-top: 0.625rem;
+        margin-bottom: 0.625rem;
+    }
+    
+    .count {
+        font-family: $font-family-base;
+        font-size: $progress-font-size * 3;
+        font-weight: $font-weight-bold;
+        line-height: 2.625;
+        font-style: normal;
+        margin-bottom: 0.313;
+    }
+    
+    .image {
+        @include display(block);
+        margin: auto;
+        height: $height * 6 ;
+        width: 3.75rem;
+        margin-bottom: -0.625rem;
+    }
+    
+    .description {
+        font-family: $font-family-base;
+        font-style: normal;
+        font-weight: $font-weight-bold;
+        font-size: $progress-font-size;
+        line-height: 1.313rem;
+    }
+}

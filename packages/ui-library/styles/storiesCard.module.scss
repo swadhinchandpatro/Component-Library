@@ -1,0 +1,62 @@
+@import "./global.scss";
+
+.card{
+  padding: ($stories-card-font-size * 2.5);
+  background: $stories-card-bg;
+  box-shadow: $stories-card-box-shadow;
+  border-radius: $stories-card-border-radius;
+  font-family: $font-family-base;
+  @include md {
+    padding: ($stories-card-font-size * 1.25);
+    width: auto !important;
+  }
+  .image_container {
+    @include display(flex);
+    img {
+      width: 70px;
+      height: $height * 7;
+      @include md {
+        width: 48px;
+        height: ($height * 4.8);
+        margin-top: ($stories-card-font-size * 1.25);
+      }
+    }
+    .title_section{
+      padding: ($stories-card-font-size * 0.5);
+      .h3 {
+        @extend .bodyXlSemiBold;
+        margin: unset !important;
+        margin-top: 6px;
+        @include md {
+          margin-top: ($stories-card-font-size * 0.25);
+        }
+
+      }
+      .h4{
+        @extend .bodySmallMedium;
+        margin: unset !important;
+        color: $stories-card-institute-name-colour;
+      }
+    }
+  }
+  .hr{
+    border: 0.5px solid $abbey;
+    opacity: 0.2;
+    margin-top: 20px !important;
+    margin-bottom: 15px !important;
+    @include md {
+      margin-bottom: ($stories-card-font-size + 0.25);
+    }
+  }
+  .review_container {
+    .h5{
+      @extend .tr;
+      font-weight: $font-weight-normal;
+      color: $balticSea;
+      margin: 0 !important;
+      @include md {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import "./global.scss";
+
+.card_container {
+    max-width: 380px;
+    @include display(flex, center, center);
+    overflow: hidden;
+    border-radius: $border-radius*4;
+    padding: 1rem 0;
+    font-family: $font-family-base;
+    cursor: pointer;
+
+    .inner_section {
+        max-width: 360px;
+        border-radius: $border-radius*4;
+        @include display(flex);
+        flex-direction: column;
+        position: relative;
+        transition: 0.5s;
+        overflow: hidden;       
+        &:hover {
+            transform: scale(1.1);
+            .hover_section {
+                @include display(block);
+                animation: slide-down 0.6s ease-out;
+                @include md {
+                    animation: slide-down 0.1s ease-out;
+                }
+            }
+        }
+        @include md {
+            &:hover {
+                transform: scale(0.9);
+            }
+        }
+
+        .card_image {
+            overflow: hidden;
+            @include display(flex);
+            img {
+                width: 100%;
+            }
+        }
+
+        .aro_icon {
+            width: 49px;
+            height: 49px;
+            margin: 0 auto;
+            cursor: pointer;
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .card_body {
+            padding: 1rem;
+            @include display(flex, center, center);
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            color: $white;
+            text-align: center;
+            &:hover {
+                background: rgba(0, 0, 0, 0.3);
+                animation: slide-down 0.6s ease-out;
+            }
+            @include md {
+                background: rgba(0, 0, 0, 0.3);
+                animation: slide-down 0.1s ease-out;
+            }
+
+            .offering_heading {
+                line-height: 62px;
+                margin-bottom: 1rem;
+                @extend .h1;
+                @include md {
+                    font-size: 32px;
+                    line-height: 42px;
+                }
+            }
+
+            @keyframes slide-down {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .hover_section {
+            padding: 0 0.5rem;
+            overflow: hidden;
+            display: none;
+            transition: 0.9s;
+            @include md {           
+                display: block;
+            }
+
+            p {
+                margin: 0 0 20px 0;
+                line-height: 22px;
+
+                @include md {
+                    font-size: 16px;                 
+                    display: block;
+                }
+            }
+        }
+
+    }
+    .active{
+        transform: scale(1.1);
+        .card_body {
+            background: rgba(0, 0, 0, 0.3);
+            animation: slide-down 0.6s ease-out;
+            }
+        .hover_section {
+            @include display(block);
+            animation: slide-down 0.6s ease-out;
+            @include md {
+                animation: slide-down 0.1s ease-out;
+            }
+        }
+        @include md {
+            transform: scale(0.9); 
+        }
+    }
+    
+
+}

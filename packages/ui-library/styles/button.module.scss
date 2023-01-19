@@ -1,0 +1,144 @@
+@import "./global.scss";
+
+.button_container {
+    .common_btn {
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        @include display(flex, center, center);
+        color: $white;
+        border: 0px;
+        border-radius: 8px;
+        cursor: pointer;
+        padding: 16px 32px;
+        width: max-content;
+        max-height: 48px;
+        transition: 0.5s;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        box-sizing: border-box;
+
+        .button_icon {
+            width: 20px;
+            margin-right: 10px;
+            margin-top: -4px;
+        }
+    }
+
+    a {
+        max-height: 48px;
+    }
+
+    .custom_btn {
+        background: $royalBlue;
+    }
+
+    .primary {
+        background: $royalBlue;
+
+        &:hover {
+            background: $codGray;
+        }
+    }
+
+    .outline {
+        background: none !important;
+        color: $codGray;
+        border: 1px solid $codGray;
+
+        &:hover {
+            background: $codGray;
+        }
+    }
+
+    .outline_secondary {
+        background: none;
+        color: $black;
+        border: 1px solid $black;
+
+        &:hover {
+            background: $codGray;
+            color: $white;
+        }
+    }
+
+    .outline_primary {
+        background: $white;
+        color: $lightRoyalBlue;
+        border: 1.5px solid $lightRoyalBlue;
+        filter: drop-shadow(0px 5px 10px rgba(108, 155, 231, 0.1));
+        padding: 16px 25px;
+
+        &:hover {
+            background: $codGray;
+            color: $white;
+        }
+    }
+
+    .light {
+        background: $athensGray;
+        color: $paleSky;
+
+        &:hover {
+            background: $codGray;
+            color: $white;
+        }
+    }
+
+    .white {
+        background: $white;
+        color: $royalBlue;
+
+        &:hover {
+            background: $codGray;
+            color: $white;
+        }
+    }
+
+    .secondary {
+        background: $linearGradient;
+        box-shadow: 0px 4px 16px rgba(208, 165, 99, 0.4);
+        color: $white;
+        padding: 16px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        font-size: $font-size-12px;
+        font-weight: 400;
+
+        .button_icon {
+            margin-right: 10px;
+            margin-top: -4px;
+        }
+    }
+
+    .defalut {
+        width: max-content;
+    }
+
+    .medium {
+        width: 50%;
+    }
+
+    .large {
+        width: 100%;
+    }
+
+    .disable {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    .btn_image_right {
+        flex-direction: row-reverse;
+
+        .button_icon {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+    }
+
+    .buttonWithoutClick {
+        background: $royalBlue;
+        cursor: default;
+    }
+
+}

@@ -1,0 +1,60 @@
+@import "./global.scss";
+
+.blog {
+    width: 33.33%;
+    @include lg {
+        width: 50%;
+        .blog_image {
+            width: 100%;
+        }
+    }
+    @include md {
+        width: 100%;
+        .blog_image {
+            width: 100%;
+        }
+    }
+    .blog_text {
+        margin-top: 32px;
+        &:hover .blog_icon {
+            margin-left: 12px;
+            @include display(block);
+        }
+    }
+
+    .blog_heading {
+        @extend .h4;
+        @include display(flex, center);
+        color: $black;
+        margin: 0;
+
+        &:hover {
+            color: $primary;
+            cursor: pointer;
+        }
+        .blog_icon{
+            @include display(none);
+        }
+    }
+    .blog_para {
+        @extend .bodyMediumRegular;
+        color: $scarpaFlowLight;
+        margin: 0;
+    }
+    .video_tag{
+        width: 90%;
+        height: 261px;
+        border-radius: $border-radius * 4;
+        @include md {
+            width: 100%;
+        }
+    }
+}
+.blog[dir="rtl"]
+{
+    .blog_icon {
+        transform: rotate(270deg);
+        margin-right: 12px;
+        margin-left: 0;
+    }
+}

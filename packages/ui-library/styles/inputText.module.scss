@@ -1,0 +1,39 @@
+@import "./global.scss";
+
+.input_text {
+    font-family: $font-family-base;
+    .input_label{
+        @extend .bodyMediumRegular;
+        color: $neutral;
+    }
+    .input_base{
+        position: relative;
+        max-width: 400px;
+        width: 100%;
+        
+        .input_field{
+            @include display(flex, center);
+            background: $white;
+            border: 1px solid $mischka;
+            border-radius: 8px;
+            width: auto;
+            height: 20px;
+            padding: 12px 16px;
+            @include md {
+                height: 40px;
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }&::placeholder{
+            @extend .tp;
+            color: $graySuit;
+        }
+    }
+    img{
+        position: absolute;
+        right: 0.6rem;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}

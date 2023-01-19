@@ -1,0 +1,281 @@
+@import "./global.scss";
+
+.footer {
+    font-family: $font-family-base;
+    .top_section {
+        @include display(flex);
+        padding: 96px 120px 32px;
+        flex-direction: row;
+        align-items: flex-start;
+
+        @include lg {
+            padding: 90px 70px 32px;
+        }
+
+        @include md {
+            padding: 0;
+            flex-direction: column;
+        }
+
+        .mob_View {
+            @include display(none);
+
+            @include md {
+                @include display(block);
+                margin: 40px 0 20px 0;
+            }
+
+        }
+
+        .social_links {
+            img {
+                @include md {
+                    margin-right: 16px
+                }
+            }
+        }
+
+        .logo_section {
+            @include display(flex);
+            flex-direction: column;
+            align-items: flex-start;
+            width: 20%;
+
+            @include md {
+                @include display(block);
+                width: 100%;
+            }
+
+            .img_logo {
+                height: 64px;
+                width: 138px;
+            }
+
+            p {
+                @extend .bodySmallBold;
+                color: $balticSea;
+                opacity: 0.6;
+                margin-top: 43px;
+                margin-bottom: 20px;
+
+                @include md {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: $balticSea;
+                    margin-top: 0;
+                    margin-bottom: 10px;
+
+                }
+            }
+
+            .app_section {
+                @include display(flex, unset, space-between);
+                flex-direction: column;
+
+                @include md {
+                    flex-direction: row;
+                }
+
+                .img_app_store {
+                    height: 38px;
+                    margin-bottom: 1px;
+
+                    @include md {
+                        height: 50px;
+                        width: 100%;
+                    }
+                }
+
+                .img_play_store {
+                    width: 120px;
+                    height: 40px;
+
+                    @include md {
+                        height: 50px;
+                        padding-left: 10px;
+                    }
+                }
+
+            }
+        }
+
+        .mobile_hr {
+            @include display(none);
+
+            @include md {
+                display: block;
+                padding: 0 16px;
+                margin: 20px 0px !important;
+                width: -webkit-fill-available;
+            }
+        }
+
+        .info_section {
+            @include display(flex);
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 80px;
+            width: 20%;
+
+            @include md {
+                padding-left: 0px;
+                width: auto;
+            }
+
+            p {
+                @extend .bodySmallBold;
+                color: $balticSea2;
+                opacity: 0.6;
+                margin-top: 0;
+                margin-bottom: 18px;
+
+                @include md {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color:$balticSea;
+                }
+            }
+
+            .link {
+                margin-bottom: 18px;
+                a {
+                    // @extend .bodyMediumRegular;
+                    color: $neutral50;
+                   
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $balticSea;
+                    }
+
+                    @include md {
+                        @include display(list-item);
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: $jumbo;
+                        margin-left: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    hr {
+        border: 0;
+        border-bottom: 1px solid $mischka;
+        margin: 11px 120px 19px;
+
+        @include md {
+            margin: 0px 0 20px 0;
+        }
+    }
+
+    .bottom_section {
+        @include display(flex, unset, space-between);
+        padding: 24px 120px 48px;
+        flex-direction: row;
+        align-items: flex-start;
+
+        @include md {
+            padding: 0px;
+        }
+
+        .static_links {
+            @include display(flex);
+            flex-direction: column;
+            align-items: flex-start;
+            width: 60%;
+
+            @include md {
+                margin-bottom: 30px;
+            }
+
+            .row_terms {
+                @include display(flex,center);
+                flex-direction: row;
+
+                .line {
+                    display: inline-block;
+                    border-left: 1px solid $jumbo;
+                    margin: 1px 14px 0  17px;
+                    padding: 0px;
+                    height: 25px;
+                    @include md{
+                        display: inline;
+                        margin: 0px 10px 0px 2px;
+                    }
+                }
+                
+                p {
+                    @extend .bodySmallRegular;
+                    color: $jumbo;
+                    margin: 0px 35px 0px 0px;
+
+                    @include md {
+                        margin: 0;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                span {
+                    @extend .bodySmallRegular;
+                  
+                    margin: 11px 0px 11px 5px;
+
+                    a {
+                        color: $balticSea2;
+                        text-decoration: none;
+                        @include md {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    @include md {
+                        margin: 0;
+                    }
+                }
+
+                @include md {
+                    @include display(block)
+                }
+            }
+        }
+
+        .social_links {
+            @include display(flex);
+            flex-direction: column;
+            align-items: flex-end;
+            width: 48%;
+
+            .row_social {
+                @include display(flex);
+                float: right;
+                flex-direction: row;
+
+                .img_social {
+                    height: 40px;
+                    width: 40px;
+                    padding: 0 5px;
+
+                    @include md {
+                        padding: 0 2px;
+                    }
+
+                }
+            }
+        }
+
+        .web_view {
+            display: block;
+
+            @include md {
+                @include display(none);
+            }
+        }
+
+    }
+
+}

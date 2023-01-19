@@ -1,0 +1,55 @@
+
+// to generate font family variants
+@mixin font($style){
+    font-family:$style;
+    src: url('../assets/fonts/metropolis/#{$style}.otf') format('opentype');
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-display: swap !important;
+}
+
+@mixin name($name , $height, $size) {
+  font-family: $name;
+  line-height: $line-height-base * $height;
+  font-size: $font-size-base * $size;
+}
+
+// to generate display property
+
+@mixin display($display, $alignItems : unset, $justifyContent:unset) {
+    display: $display;
+    @if $display == flex{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    }
+   }
+
+// to generate responsivness property
+//small devices
+
+   @mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+  }
+  
+  // Medium devices
+  @mixin md {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+  }
+  
+  // Large devices
+  @mixin lg {
+    @media (max-width: #{$screen-lg-min}) {
+        @content;
+    }
+  }
+  
+  // Extra large devices
+  @mixin xl {
+    @media (max-width: #{$screen-xl-min}) {
+        @content;
+    }
+  }

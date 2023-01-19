@@ -1,0 +1,91 @@
+
+// Define the maximum width of `.container` for different screen sizes.
+// scss-docs-start container-max-widths
+$grid-breakpoints: () !default;
+$grid-breakpoints: map-merge(
+  (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+  ),
+  $grid-breakpoints
+);
+
+$screen-sm-min: map-get($grid-breakpoints ,"sm");
+$screen-md-min: map-get($grid-breakpoints ,"md");
+$screen-lg-min: map-get($grid-breakpoints ,"lg");
+$screen-xl-min: map-get($grid-breakpoints ,"xl");
+
+$gridColumn:12;
+//*-----------------------------------------------
+//|   Font Family
+//-----------------------------------------------*/
+
+//font added
+$font-family-metropolis-Regular:        "Metropolis-Regular";
+$font-family-metropolis-Bold:           "Metropolis-Bold";
+$font-family-metropolis-ExtraBold:      "Metropolis-ExtraBold";
+$font-family-metropolis-Black:          "Metropolis-Black";
+
+$font-family-base:             $font-family-metropolis-Regular;
+$font-family-bold:             $font-family-metropolis-Bold;
+$font-family-black:            $font-family-metropolis-Black;
+$font-family-extraBold:        $font-family-metropolis-ExtraBold;
+$font-size-base:               1rem !default; // Assumes the browser default, typically `16px`
+$font-size-12px:              0.75rem;
+$font-size-14px:              0.875rem;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-between-normal-bold: 500 !default;
+$font-weight-bold:            700 !default;
+$font-weight-semibold:        900 !default;
+$font-weight-bolder:          bolder !default;
+
+
+$font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+// scss-docs-end font-variables
+
+// Settings for the `<body>` element.
+
+$body-bg :                  $white !default;
+$body-color:                $neutral !default;
+$height:                    10px !default;
+$width:                     10px !default;
+
+// scss-docs-start border-radius-variables
+$border-radius:               .25rem !default;
+
+// Progress bars
+// scss-docs-start progress-variables
+$progress-height:                   1rem !default;
+$progress-font-size:                $font-size-base !default;
+$progress-bg-fill:                  $linkWater !default;
+$progress-bg:                       $fountainBlue !default;
+$progress-border-radius:            $font-size-base + $border-radius !default;
+$progress-bar-color:                $white !default;
+$progress-bar-bg:                   $primary !default;
+$progress-bar-animation-timing:     1s linear infinite !default;
+$progress-bar-transition:           width .6s ease !default;
+// scss-docs-end progress-variables
+
+// Stories Card
+
+// scss-docs-start stories-card-variables
+$stories-card-font-size:                $font-size-base !default;
+$stories-card-border-radius:            $font-size-base + ($border-radius * 2) !default;
+$stories-card-bg:                       $white !default;
+$stories-card-font-weight:              $font-weight-normal !default;
+$stories-card-box-shadow:               0px 10px 10px rgba(33, 150, 243, 0.1) !default;
+$stories-card-institute-name-colour:    $scarpaFlow !default;
+// scss-docs-end stories-card-variables

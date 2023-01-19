@@ -1,0 +1,34 @@
+@import "./global.scss";
+
+.chips,.chips_inactive {
+    width: fit-content;
+    background: $linkWater;
+    color:$balticSea;
+    padding: 1.125rem 1.5rem;
+    cursor: pointer;
+    height: 25px;
+    border-radius: $border-radius*4;
+    .chips_text{
+        margin: 0;
+        @extend .bodyXlRegular;
+        color: $black;
+        float: left;
+        margin-top: -4px;
+    }
+    .chips_icon_left{
+        margin-left: 10px;
+        float: left;
+    }
+    .chips_icon_right{
+        margin-right: 10px;
+        float:left
+    }
+}
+.border_radius{
+    border-radius: $border-radius*2;
+}
+
+
+.chips {
+    background: $hawkesBlue;
+}

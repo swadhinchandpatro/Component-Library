@@ -1,0 +1,77 @@
+
+//*-----------------------------------------------
+//|   white Family
+//-----------------------------------------------*/
+
+$white: #fff;
+$codGray: #1E1E1E;
+$bonJour: #e9e8e9;
+$athensGray:#E5E7EB;
+$jumbo:#78767A;
+$paleSky:#6B7280;
+$scarpaFlowLight:#5F5E62;
+$scarpaFlow:#5F5D67;
+$graySuit: #C9C5CA;
+$mischka: #E5E1E6;
+$neutral50: #787680;
+
+//*-----------------------------------------------
+//|   yellow Family
+//-----------------------------------------------*/
+
+$sunflowerYellow: #FDDC00;
+$goldSand: #E3BF85;
+$diSerria:#D7A04D;
+$putty: #EAC994;
+
+//*-----------------------------------------------
+//|   red Family
+//-----------------------------------------------*/
+
+$mediumRedViolet: #C32D90;
+$thunderBird :  #BA1A1A;
+
+//*-----------------------------------------------
+//|   blue Family
+//-----------------------------------------------*/
+
+$linkWater : #F4F5FC;
+$fountainBlue : #65BDC4;
+$hawkesBlue : #E1E7FC;
+$royalBlue: #3D2AE7;
+$electricViolet : #6113E0;
+$lightRoyalBlue:#3D2AE7;
+
+//*-----------------------------------------------
+//|   green Family
+//-----------------------------------------------*/
+
+$limeade : #6BCD00;
+
+//*-----------------------------------------------
+//|   black Family
+//-----------------------------------------------*/
+
+$black: #000;
+$balticSea: #313034;
+$abbey: #47464F;
+$balticSea2: #1C1B1F;
+
+
+// scss-docs-start theme-color-variables
+$primary:         $royalBlue!default;
+$secondary:       $electricViolet;
+$tertiary:        $mediumRedViolet;
+$neutral:         $scarpaFlowLight;
+$neutralVariant:  $scarpaFlow;
+$success:         $limeade !default;
+$error:           $thunderBird !default;
+// scss-docs-end theme-color-variables
+
+
+// Start - Button linear-gradient background color //
+ $linearGradient: linear-gradient(92.62deg, #E3BF85 0%, #D7A04D 93.43%, #EAC994 127.39%);
+// End - Button linear-gradient background color //
+
+
+

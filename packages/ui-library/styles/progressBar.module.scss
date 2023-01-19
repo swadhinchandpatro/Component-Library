@@ -1,0 +1,87 @@
+@import "./global.scss";
+
+.progress_Linear {
+    .small {
+        .progress {
+            height: $height;
+        } 
+    }
+    .medium{
+        .progress {
+            @include md {
+                height: $height*1.5;
+            }
+            height: $height*3;      
+        } 
+        .progress_Label, .showValue{
+            @include md {
+                font-size: $progress-font-size + 0.2;
+            }
+            font-size: $progress-font-size * 2;
+        }
+     
+    }
+    .large{
+        .progress {
+            @include md {
+                height: $height*2;
+            }
+            height: $height*6;
+        } 
+        .progress_Label, .showValue{
+            @include md {
+                font-size:$progress-font-size + 0.5;
+            }
+            font-size:$progress-font-size * 4;
+        }   
+    }
+    .default{
+        @include display(block);
+        .progress {
+            position: relative;    
+        }    
+    }
+    .inline{
+        @include display(flex, center);
+        .progress_Label  {
+            margin-right: $progress-font-size + .25rem;
+        }
+        .showValue {
+            margin: 0;
+            margin-left: $progress-font-size + .25rem;
+        }
+    }
+
+    .progress {
+        width: 100%;
+        margin-top: 10px;
+        background-color:  $progress-bg;
+        border-radius: $progress-border-radius;
+        position: relative;   
+       
+    }
+    
+    .progress_Done {
+        @include display(flex, center);
+        height: 100%;
+        width: 0;
+        background-color: $progress-bg-fill;
+        border-radius: $progress-border-radius;
+        opacity: 1;
+        transition: 1s ease 0.3s;
+    }
+      
+    .progress_Label, .showValue {
+        font-family: $font-family-base;
+        font-size: $progress-font-size;
+    }
+    .showValue {
+        text-align: right;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+}
+
+.error{
+    color: $error;
+}

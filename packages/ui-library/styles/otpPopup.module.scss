@@ -1,0 +1,144 @@
+@import "./global.scss";
+
+.otpCard {
+    .otpDialog {
+        width: 100%;
+        border-radius: 0.5rem;
+        justify-content: center;
+        max-width: 27rem;
+        margin: 0 auto;
+    }
+    .otpDialogContent {
+        width: 100%;
+    }
+    .otpInput {
+        width: 3.25rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        border: 1px solid #929094;
+        margin: 0 1rem 0 0; 
+        text-align: center;
+        @include md {
+            width: 2rem;
+            margin-right: 0.3rem;
+            flex: 1;
+        }
+        @media screen and (max-width:400px) {
+            height: 2.2rem;
+        }
+
+    }
+    .otpInputBox {
+    width: 100%;
+    @include display(flex, center, flex-start);
+    border-color: #877F89;
+    margin-bottom: 1.563rem;
+    margin-top: 1rem;
+    }
+    
+    .otpSubmitButton{
+        text-transform: 'none';
+        @include md{
+            width: 100%;
+        }
+    }
+
+    .icon {
+        height: 2.4 * $height; 
+        width:  2.4 * $width;
+        cursor: pointer;
+    }
+    
+    .messageDiv {
+        margin-top: 1.25rem;
+        @include display(flex);
+    }
+    
+    .retryMessageResend {
+        display: 'flex';
+    }
+
+    .resendButton {
+        color: $black;
+        font-family: $font-family-base;
+        font-weight: $font-weight-bold;
+        text-transform: "none";
+        button{
+            padding: 0;
+            &:hover {
+                background: none;
+                color: $royalBlue;
+                text-decoration: underline;
+            }
+        }
+       
+    }
+    .otpSentText {
+        width: 100%;
+        color: #808080;
+        font-family: $font-family-base;
+        font-weight: $font-weight-normal;
+        line-height: 1.625rem;
+        font-size: 1.25 * $font-size-base;
+        @include md {
+            font-size: $font-size-base;
+        }
+    }
+    
+    .otpNotRecievedText {
+        color:#808080;
+        margin-top: 0.625rem;
+        font-family: $font-family-base;
+        font-size: 1.25 * $font-size-base;
+        line-height: 1.625rem;
+        @include md {
+            font-size: $font-size-base;
+        }
+    }
+    .retryInText {
+        color: #808080;
+        margin-top: -1.25rem;
+        font-family: $font-family-base;
+    }
+
+    .mobileNo {
+        color: #0D0A0A;
+        font-family: $font-family-base;
+        @extend .bodyXlSemiBold;
+        line-height: 1.625rem;
+        font-size: 1.25 * $font-size-base;
+        @include md {
+            font-size: $font-size-base;
+        }
+    }
+    .otpMessage{
+        margin-bottom: 3%;
+    }
+    .timerCountDown {
+        color: #000000;
+        font-family: $font-family-base;
+    }
+    
+    .otpSuccess {
+        @extend .tr;
+        color: #6BCD00;
+        font-size: $font-size-14px;
+        @include md {
+            font-size: $font-size-12px;
+        }
+    }
+    .otpError {
+        @extend .tr;
+        color: $thunderBird;
+        font-size: $font-size-14px;
+        @include md {
+            font-size: $font-size-12px;
+        }
+    }
+
+    .otp_input_error{
+       input{
+         border: 1px solid #BA1A1A;
+       }
+    }
+} 
